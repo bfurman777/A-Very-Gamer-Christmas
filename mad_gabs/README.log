@@ -1,0 +1,27 @@
+# Install dependencies (if needed)
+sudo apt update
+sudo apt install python3 python3-pip python3-venv ffmpeg
+
+# Create a new directory and virtual environment
+mkdir whisper_project
+cd whisper_project
+python3 -m venv whisper-env
+
+# Activate the virtual environment
+source whisper-env/bin/activate
+
+# Install the dependencies for pyaudio
+sudo apt install portaudio19-dev python3-pyaudio
+
+# This might not be needed
+sudo apt install ffmpeg
+
+# Install Whisper inside the virtual environment
+pip3 install pyaudio
+pip install openai-whisper
+
+# Run your transcription script
+python transcribe.py
+
+# Deactivate the virtual environment when done
+deactivate
