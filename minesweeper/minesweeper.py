@@ -16,7 +16,7 @@ HEIGHT = 28
 WIDTH = 33
 
 
-PERCENT_MINES = 0.01
+PERCENT_MINES = 0.2
 
 # assert(WIDTH == 50 and HEIGHT == 28)  # we are hard coding now
 
