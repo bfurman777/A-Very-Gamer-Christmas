@@ -1,1 +1,5 @@
-Ho ho holy shoot this game collection is gamer.
+Welcome to LJ's ____ and Grill!
+
+
+Run your program with `wrapper.py` to ensure it always restart when closed/crashed.
+i.e.  `./wrapper.py python3 frogger.py`
