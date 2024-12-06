@@ -1,1 +1,1 @@
-Ho ho holy shoot this game collection is gamer.
+Welcome to LJ's ____ and Grill!
