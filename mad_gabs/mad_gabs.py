@@ -6,6 +6,11 @@ import time
 import signal
 from datetime import datetime
 
+WELCOME_STRING = """
+Welcome to Mad Gabs!
+...
+"""
+
 teams_next_station = \
     {
         'jack'          :   'Q',
@@ -110,7 +115,7 @@ mad_gabs = \
 
 team_mad_gabs = { name : mad_gabs[i] for i, name in enumerate(teams_next_station)}
 
-SCREEN_TIME_OUT = 30
+SCREEN_TIME_OUT = 60
 
 def get_mad_gab(team_name):
     if team_name not in team_mad_gabs:
@@ -123,7 +128,7 @@ def record_audio(mad_gab, filename, duration=10, rate=44100, channels=2, chunk_s
     # Set up the audio stream
     p = pyaudio.PyAudio()
 
-    print(f"Can you say... \n\n{mad_gab[0]}\n")
+    print(f"{WELCOME_STRING}\n\nCan you say... \n\n{mad_gab[0]}\n")
     input('Press Enter to start recording!\n')
     print('\nStarting recording in...')
     for i in range(3):
@@ -203,11 +208,11 @@ def main_game_loop(team_name):
         print(transcription)
         if mad_gab[1].lower() in transcription.lower():
             print(f"I heard you loud and clear!\nHere's your next clue....\n\n{clues[next_stage]}\n\n")
-            # print(f'clearing the screen in {SCREEN_TIME_OUT} seconds...')
-            # print('CTRL+c to start a new game')
+            print(f'clearing the screen in {SCREEN_TIME_OUT} seconds...')
+            print('CTRL+c to start a new game')
 
-            # time.sleep(30)
-            # os.system('clear')
+            time.sleep(SCREEN_TIME_OUT)
+            os.system('clear')
 
             return
         print("No! No! No! You didn't say it right. You're not in the spirit! Try again...")
