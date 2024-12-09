@@ -123,8 +123,9 @@ def record_audio(mad_gab, filename, duration=10, rate=44100, channels=2, chunk_s
     # Set up the audio stream
     p = pyaudio.PyAudio()
 
-    print(f"Can you say... \n\n{mad_gab[0]}\n\nStarting recoring in...")
-
+    print(f"Can you say... \n\n{mad_gab[0]}\n")
+    input('Press Enter to start recording!\n')
+    print('\nStarting recording in...')
     for i in range(3):
         print(3 - i)
         time.sleep(1)
