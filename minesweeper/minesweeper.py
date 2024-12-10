@@ -16,7 +16,7 @@ HEIGHT = 28
 WIDTH = 33
 
 
-PERCENT_MINES = 0.2
+PERCENT_MINES = 0.14
 
 # assert(WIDTH == 50 and HEIGHT == 28)  # we are hard coding now
 
@@ -325,6 +325,10 @@ class Minesweeper:
         #    self.restart()
         #else:
         #    self.tk.quit()
+        if not won:
+            tkMessageBox.askyesno("Game Over", "Oh no! You triggered one of the Grinch's mines! Can you save your tree this time?")
+            self.restart()
+            return
         
         while True:
             try:
