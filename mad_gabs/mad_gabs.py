@@ -4,7 +4,10 @@ import os
 import whisper
 import time
 import signal
+import warnings
 from datetime import datetime
+
+warnings.filterwarnings("ignore")
 
 WELCOME_STRING = """
 Welcome to LGS Mad Gab! Brought to you by IRAD and Artificial Intelligence!
@@ -188,6 +191,7 @@ def transcribe_audio(filename):
     # Load the Whisper model (this will automatically download it if not present)
     model = whisper.load_model("base")  # You can use "small", "medium", "large" based on your need
 
+    print("\nBeep Boop Beep... I'm learning your language... Human... \n(Turning voice to text...)\n")
     # Transcribe the audio file
     result = model.transcribe(filename)
     
