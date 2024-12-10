@@ -142,7 +142,8 @@ def record_audio(mad_gab, filename, duration=10, rate=44100, channels=2, chunk_s
     p = pyaudio.PyAudio()
 
     print(f"{WELCOME_STRING}\n\nCan you say... \n\n{mad_gab[0]}\n")
-    input('Press Enter to start recording!\n')
+    print('Press Enter to start recording!\n')
+    input()
     print('\nStarting recording in...')
     for i in range(3):
         print(3 - i)
@@ -232,8 +233,8 @@ def main_game_loop(team_name):
         print("No! No! No! You didn't say it right. You're not in the spirit! Try again...")
 
 def verify_team_name():
-
-    team_name = input('Enter your team name:\n')
+    print('Enter your team name:')
+    team_name = input()
 
     team_name = team_name.strip().lower()
     if team_name in teams_next_station:
