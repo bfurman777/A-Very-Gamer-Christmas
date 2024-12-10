@@ -7,8 +7,18 @@ import signal
 from datetime import datetime
 
 WELCOME_STRING = """
-Welcome to Mad Gabs!
-...
+Welcome to LGS Mad Gab! Brought to you by IRAD and Artificial Intelligence!
+
+
+Mad Gab is a word game where teams race to translate groups of words into phrases before time runs out:
+
+    How to play:
+    Teams work together to sound out puzzles.
+    The puzzles are called mondegreens, and are made up of small words that sound like a word or phrase when said quickly.
+    For example, "These If Hill Wore" sounds like "The Civil War".
+    The game tests the brain's ability to process sounds into meaningful words and phrases.
+
+    Solve the mondegreen to get your next clue!
 """
 
 teams_next_station = \
@@ -207,7 +217,7 @@ def main_game_loop(team_name):
         print("\nDid you say?:\n")
         print(transcription)
         if mad_gab[1].lower() in transcription.lower():
-            print(f"I heard you loud and clear!\nHere's your next clue....\n\n{clues[next_stage]}\n\n")
+            print(f"\nTHAT'S RIGHT!!!\nI heard you loud and clear!\nHere's your next clue....\n\n{clues[next_stage]}\n\n")
             print(f'clearing the screen in {SCREEN_TIME_OUT} seconds...')
             print('CTRL+c to start a new game')
 
