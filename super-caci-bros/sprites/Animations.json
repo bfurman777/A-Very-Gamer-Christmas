@@ -1,0 +1,95 @@
+{
+    "spriteSheetURL": "./img/tiles.png",
+    "type":"animation",
+    "sprites":[
+        {
+            "name":"CoinBox",
+            "images":[
+                {
+                    "x":24,
+                    "y":0,
+                    "scale":2
+                },
+                {
+                    "x":25,
+                    "y":0,
+                    "scale":2
+                },
+                {
+                    "x":26,
+                    "y":0,
+                    "scale":2
+                }
+            ],
+            "deltaTime":10,
+            "colorKey": null
+        },
+        {
+            "name":"coin",
+            "images":[
+                {
+                    "x":24,
+                    "y":1,
+                    "scale":2
+                },
+                {
+                    "x":25,
+                    "y":1,
+                    "scale":2
+                },
+                {
+                    "x":26,
+                    "y":1,
+                    "scale":2
+                }
+            ],
+            "deltaTime":10,
+            "colorKey": -1
+        },
+        {
+            "name":"Door",
+            "images":[
+                {
+                    "x":26,
+                    "y":8,
+                    "scale":2
+                },
+                {
+                    "x":27,
+                    "y":8,
+                    "scale":2
+                },
+                {
+                    "x":28,
+                    "y":8,
+                    "scale":2
+                }
+            ],
+            "deltaTime":10,
+            "colorKey": -1
+        },
+        {
+            "name":"Door_2",
+            "images":[
+                {
+                    "x":26,
+                    "y":9,
+                    "scale":2
+                },
+                {
+                    "x":27,
+                    "y":9,
+                    "scale":2
+                },
+                {
+                    "x":28,
+                    "y":9,
+                    "scale":2
+                }
+            ],
+            "deltaTime":10,
+            "colorKey": -1
+        }
+    ]
+}
+
