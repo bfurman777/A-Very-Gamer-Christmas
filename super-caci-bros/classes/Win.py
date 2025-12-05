@@ -4,6 +4,12 @@ import sys
 from classes.Spritesheet import Spritesheet
 from classes.GaussianBlur import GaussianBlur
 
+import tkinter as tk
+from tkinter import simpledialog, messagebox
+
+ROOT = tk.Tk()
+ROOT.withdraw()
+
 class Win:
     def __init__(self, screen, entity, dashboard):
         self.screen = screen
@@ -19,10 +25,43 @@ class Win:
             20, 150, 2, colorkey=[255, 0, 220], ignoreTileSize=True
         )
 
-    def update(self):
+    def update(self, once):
         self.screen.blit(self.pause_srfc, (0, 0))
         self.dashboard.drawText("YOU WON", 120, 160, 68)
-        self.dashboard.drawText("CONTINUE", 150, 280, 32)
+        # check it out
+        # the input dialog
+        if once:
+            valid = False
+            picked = None
+            team_names = ['harry potter', 'hermione granger', 'ron weasley', 'luna lovegood', 'draco malfoy'
+                          'rubeus hagrid', 'severus snape', 'minerva mcgonagall', 'albus dumbledore', 'lord voldemort']
+            riddle = {  'harry potter':'',
+                        'hermione granger':'', 
+                        'ron weasley':'', 
+                        'luna lovegood':'', 
+                        'draco malfoy':'',
+                        'rubeus hagrid':'', 
+                        'severus snape':'', 
+                        'minerva mcgonagall':'b', 
+                        'albus dumbledore':'a', 
+                        'lord voldemort':'''Beside the lake where ripples gleam
+A "Soul" awaits with quiz like scheme
+Answer true, let wit prevail
+Earn House points by the water's trail'''}
+            while not valid:
+                USER_INP = simpledialog.askstring(title="Team Name",
+                                        prompt="What's your Team Name? (partial name works too)")
+                if len(USER_INP) < 3:
+                    messagebox.showwarning("Warning:", "Input must be longer")
+                    continue
+                for tn in team_names:
+                    if USER_INP.lower() in tn:
+                        valid = True
+                        picked = tn
+                
+            messagebox.showinfo(f'{picked} Riddle:', riddle[picked])
+            
+        self.dashboard.drawText("CONGRATS !", 150, 280, 32)
         self.dashboard.drawText("BACK TO MENU", 150, 320, 32)
         self.drawDot()
         pygame.display.update()
