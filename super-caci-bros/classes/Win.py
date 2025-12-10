@@ -35,19 +35,20 @@ class Win:
             picked = None
             team_names = ['harry potter', 'hermione granger', 'ron weasley', 'luna lovegood', 'draco malfoy'
                           'rubeus hagrid', 'severus snape', 'minerva mcgonagall', 'albus dumbledore', 'lord voldemort']
-            riddle = {  'harry potter':'',
-                        'hermione granger':'', 
-                        'ron weasley':'', 
-                        'luna lovegood':'', 
-                        'draco malfoy':'',
-                        'rubeus hagrid':'', 
-                        'severus snape':'', 
-                        'minerva mcgonagall':'b', 
-                        'albus dumbledore':'a', 
+            riddle = {  'harry potter':'''''', # Q
+                        'hermione granger':'''''', # Z
+                        'ron weasley':'''''', # S
+                        'luna lovegood':'''''', # K
+                        'draco malfoy':'''''', # K
+                        'rubeus hagrid':'''''', # G
+                        'severus snape':'''''', # G
+                        'minerva mcgonagall':'''''', # S
+                        'albus dumbledore':'''''', # K
                         'lord voldemort':'''Beside the lake where ripples gleam
 A "Soul" awaits with quiz like scheme
 Answer true, let wit prevail
-Earn House points by the water's trail'''}
+Earn House points by the water's trail''' # L
+            }
             while not valid:
                 USER_INP = simpledialog.askstring(title="Team Name",
                                         prompt="What's your Team Name? (partial name works too)")
