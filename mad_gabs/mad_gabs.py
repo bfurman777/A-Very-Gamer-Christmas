@@ -8,7 +8,7 @@ import warnings
 from datetime import datetime
 
 warnings.filterwarnings("ignore")
-
+# Test
 WELCOME_STRING = """
 Welcome to LGS Mad Gab! Brought to you by IRAD and Artificial Intelligence!
 
@@ -26,90 +26,87 @@ Mad Gab is a word game where teams race to translate groups of words into phrase
 
 teams_next_station = \
     {
-        'jack'          :   'Q',
-        'sally'         :   'S',
-        'zero'          :   'I',
-        'claws'         :   'P',
-        'oogie'         :   'E',
-        'mayor'         :   'P',
-        'triplets'      :   'G',
-        'finkelstein'   :   'L',
-        'reaper'        :   'E',
-        'harlequin'     :   'I'
+        'serverus snape'        :   'K',
+        'minerva mcgonagall'    :   'Z',
+        'ron weasley'           :   'Q',
+        'harry potter'          :   'S',
+        'luna lovegood'         :   'P',
+        'albus dumbeldore'      :   'Z',
+        'draco malfoy'          :   'G',
+        'rubeus hagrid'         :   'Z',
+        'lord voldemort'        :   'O',
+        'hermoine granger'      :   'L'
     }
 
 clues = \
     {
-    "I" : """
-    Looking in from the street 
-    You'll see something pretty neat 
-    Laptops causing feelings of glee 
-    As teams make connections easily""",
-
     "G" : """
-    Look up from your screen 
-    Upon a lake so pristine
-    But watch your steps in this area 
-    There are mines that can scare 'ya""",
-
-    "L" : """
-    Look upon this work of art 
-    On the wall is where to start
-    Supposedly in view of a lake 
-    You'll find this claim a bit fake""",
-
-    "S" : """
-    The bathrooms here are barely functional 
-    Easy there, try not to get too emotional. 
-    Solve this puzzle if you dare!
-    You should brush up on your Viginere.""",
-
-    "A" : """
-    In Montana and Wyoming you might find 
-    Something that will blow your mind 
-    Say the words, like a magic spell 
-    And make sure to pronounce them well.""",
-
-    "E" : """
-    It may be a surprise
-    When, among the supplies,
-    You find a wheel you can turn.
-    It's not wheel of fortune;
-    Money, you won't earn.
-    But spin this wheel, and see what you learn!""",
+    Beside the lake where ripples gleam
+    A Word Game awaith with quiz like scheme
+    Asnwer true, let wit prevail
+    Earn House points by the water's trail""",
 
     "R" : """
-    Look for the post of a vigilant sentry 
-    Near the place that grants you entry 
-    And there upon the TV screen 
-    A familiar map will be seen""",
+    I solemnly swear I'm up to no good
+    Find where vistors once stood
+    Footprints flicker, secrets gleam
+    Your map reveals the hidden scheme""",
 
     "O" : """
-    In the place where you see the park,
-    Come and find our mark 
-    AND with these ORdinary gates
-    Solve the puzzle to determine your fates""",
+    Run through the halls of stone
+    Past floating candles and the portrait's drone
+    At the bathroom wall, where the next clue sprawls
+    And answer another teams' calls""",
 
     "K" : """
-    An animal with horns upon its head 
-    Would choose this pen to make its bed 
-    Full of papers you can fold
-    To reveal secrets yet untold""",
+    Near the lot wehre muggles queue
+    Your next station awaits you
+    On the wall you will find
+    A new puzzle to trick your mind""",
 
     "P" : """
-    At this point you know the drill 
-    Head to LJ's _______ and Grill
-    One teammate will be blind
-    With help, the answers they will find""",
+    In Diagon Alley On a street next to a valley
+    Catch the snitch, avoid misery,
+    And claim your path to victory""",
+
+    "Z" : """
+    In the room with magic supplies
+    You'll find an intersting suprise
+    A wizard guide with secrets to tell
+    Find the ingredients and mix them well""",
 
     "Q" : """
-    It's time that we departed
-    Come back to where you started
-    Enter the letters from each station 
-    To begin your celebration""",
+    Where potions brew and chatter blend
+    Your final spell is near the end
+    Rest your wand, the quest is done
+    Hour Points earned, well fought and won
+    Return to wehre it had begun.
+    
+    Hippogriff""",
 
-    "F" : "lmaooooooo"
+    "I" : """
+    Where muggles speed when lights are green
+    You will find a laptop screen
+    A leap of faith, your spells begun
+    Start your trial at level one""",
 
+    "L" : """
+    Like Hogwarts halls with portraits grand
+    It draws your attention with great demand
+    In corridors wehre cloaks might sway
+    Your next clue is near the bay""",
+
+    "S" : """
+    Your house transforms as full moons rise
+    Metallic charms will test the wise
+    Try not to lose your way
+    As boxes stage the next game you play""",
+
+    "A" : """
+    From states that start with W and M
+    You find sound in a musical den
+    Guess the tune with wizars's ear
+    And let the melody draw you near"""
     }
 
 mad_gabs = \
