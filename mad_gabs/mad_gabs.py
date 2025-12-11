@@ -81,8 +81,10 @@ clues = \
     Your final spell is near the end
     Rest your wand, the quest is done
     Hour Points earned, well fought and won
-    Return to wehre it had begun.
+    Return to where it had begun.
     
+    As your journey comes to an end,
+    to your final code you will append:
     Hippogriff""",
 
     "I" : """
@@ -94,7 +96,7 @@ clues = \
     "L" : """
     Like Hogwarts halls with portraits grand
     It draws your attention with great demand
-    In corridors wehre cloaks might sway
+    In corridors where cloaks might sway
     Your next clue is near the bay""",
 
     "S" : """
