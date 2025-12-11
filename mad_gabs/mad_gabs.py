@@ -243,6 +243,9 @@ def verify_team_name():
     team_name = input()
 
     team_name = team_name.strip().lower()
+    if not team_name:
+        print('No team name entered, please enter a name!')
+        return None
     for team in teams_next_station:
         if team_name in team:
             return team
