@@ -187,7 +187,8 @@ def record_audio(mad_gab, filename, duration=10, rate=44100, channels=2, chunk_s
 # Function to transcribe audio using Whisper
 def transcribe_audio(filename):
     # Load the Whisper model (this will automatically download it if not present)
-    model = whisper.load_model("base")  # You can use "small", "medium", "large" based on your need
+    # model = whisper.load_model("base")  # You can use "small", "medium", "large" based on your need
+    model = whisper.load_model("medium")  # You can use "small", "medium", "large" based on your need
 
     print("\nBeep Boop Beep... I'm learning your language... Human... \n(Turning voice to text...)\n")
     # Transcribe the audio file
@@ -211,7 +212,9 @@ def main_game_loop(team_name):
 
     else:
         mad_gab = get_mad_gab(team_name=team_name)
+        # rate=44100
         rate = 16000
+        # rate = 20000
         # Start recording (e.g., record for 10 seconds)
         recorded_file = record_audio(mad_gab, file_name, duration=10, rate=rate)
         
