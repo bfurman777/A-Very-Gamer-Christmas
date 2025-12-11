@@ -6,6 +6,7 @@ import time
 import signal
 import warnings
 from datetime import datetime
+from difflib import SequenceMatcher
 
 warnings.filterwarnings("ignore")
 # Test
@@ -26,16 +27,16 @@ Mad Gab is a word game where teams race to translate groups of words into phrase
 
 teams_next_station = \
     {
-        'serverus snape'        :   'K',
+        'severus snape'         :   'K',
         'minerva mcgonagall'    :   'Z',
         'ron weasley'           :   'Q',
         'harry potter'          :   'S',
         'luna lovegood'         :   'P',
-        'albus dumbeldore'      :   'Z',
+        'albus dumbledore'      :   'Z',
         'draco malfoy'          :   'G',
         'rubeus hagrid'         :   'Z',
         'lord voldemort'        :   'O',
-        'hermoine granger'      :   'L'
+        'hermione granger'      :   'L'
     }
 
 clues = \
@@ -222,7 +223,9 @@ def main_game_loop(team_name):
         transcription = transcribe_audio(recorded_file)
         print("\nDid you say?:\n")
         print(transcription)
-        if mad_gab[1].lower() in transcription.lower():
+        similarity = SequenceMatcher(None, mad_gab[1].lower(),transcription.lower()).ratio()
+        # print(similarity)
+        if mad_gab[1].lower() in transcription.lower() or similarity > 0.75:
             print(f"\nTHAT'S RIGHT!!!\nI heard you loud and clear!\nHere's your next clue....\n\n{clues[next_stage]}\n\n")
             print(f'clearing the screen in {SCREEN_TIME_OUT} seconds...')
             print('CTRL+c to start a new game')
@@ -238,8 +241,9 @@ def verify_team_name():
     team_name = input()
 
     team_name = team_name.strip().lower()
-    if team_name in teams_next_station:
-        return team_name
+    for team in teams_next_station:
+        if team_name in team:
+            return team
     print('Team Name not recognized. Please try again!')
     return None
 
