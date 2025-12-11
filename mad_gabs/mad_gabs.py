@@ -162,7 +162,7 @@ def record_audio(mad_gab, filename, duration=10, rate=44100, channels=2, chunk_s
     frames = []
 
     # Record audio for the specified duration
-    countdown = 10
+    countdown = 3
     for i in range(0, int(rate / chunk_size * duration)):
         if i % 42 == 0:
             print(countdown)
