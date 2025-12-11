@@ -1,5 +1,5 @@
 {
-    "spriteSheetURL": "./img/characters.gif",
+    "spriteSheetURL": "./img/characters.png",
     "type":"character",
     "size":[16,16],
     "sprites":[

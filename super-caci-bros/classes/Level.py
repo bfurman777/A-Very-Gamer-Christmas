@@ -20,7 +20,7 @@ class Level:
         self.sound = sound
         self.screen = screen
         self.level = None
-        self.levelLength = 0
+        self.levelLength = 150
         self.entityList = []
 
     def loadLevel(self, levelname):
