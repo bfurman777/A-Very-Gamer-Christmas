@@ -42,7 +42,7 @@ clues = \
     {
     "G" : """
     Beside the lake where ripples gleam
-    A Word Game awaith with quiz like scheme
+    A Word Game awaits with quiz like scheme
     Asnwer true, let wit prevail
     Earn House points by the water's trail""",
 
@@ -103,10 +103,10 @@ clues = \
     As boxes stage the next game you play""",
 
     "A" : """
-    From states that start with W and M
-    You find sound in a musical den
-    Guess the tune with wizars's ear
-    And let the melody draw you near"""
+    From states that start with W and M,
+    You find phrases in a magical den.
+    Guess the meaning of the wizard's spell
+    New secrets it will tell"""
     }
 
 mad_gabs = \
@@ -211,8 +211,9 @@ def main_game_loop(team_name):
 
     else:
         mad_gab = get_mad_gab(team_name=team_name)
+        rate = 16000
         # Start recording (e.g., record for 10 seconds)
-        recorded_file = record_audio(mad_gab, file_name, duration=10)
+        recorded_file = record_audio(mad_gab, file_name, duration=10, rate=rate)
         
         # Transcribe the recorded audio using Whisper
         transcription = transcribe_audio(recorded_file)
